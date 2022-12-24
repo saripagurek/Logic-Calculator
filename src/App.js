@@ -38,8 +38,6 @@ function MyForm(props) {
   
 function App() {
   
-  // const root = ReactDOM.createRoot(document.getElementById('root'))
-  // root.render(<MyForm />)
   const [data, setData] = React.useState([])
   React.useEffect(function() {
     window.brythonReady = function () {
@@ -57,8 +55,8 @@ function App() {
   }
   return (
     
-    
     <div className="App">
+      <div className="align">
       <MyForm setData={setData} />
       <table>
         <tr>
@@ -68,6 +66,7 @@ function App() {
           rows.map((row) => <tr>{row.map((cell) => <td>{cell + ""}</td>)}</tr>)
         }
       </table>
+      </div>
     </div>
   );
 }
