@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 import { useState } from 'react';
 
-let eq = "(A|B)";
+let eq = "((A|B)&(!B))";
 
 function makeData() {
   try {

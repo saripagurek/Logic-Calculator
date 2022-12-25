@@ -75,7 +75,11 @@ def logicalOr(varsToCalc):
     for i in range(numRows):
         temp = []
         for var in varsToCalc:
-            temp.append(dictVars[var][i])
+            if var not in dictVars:
+                equiv = var[len(var) - 1:] + var[len(var) - 2: -1] + var[:-2]
+                temp.append(dictVars[equiv][i])
+            else:
+                temp.append(dictVars[var][i])
         newBool = 0
         for j in range(len(temp)):
             newBool = (newBool + temp[j])
@@ -112,7 +116,11 @@ def logicalAnd(varsToCalc):
     for i in range(numRows):
         temp = []
         for var in varsToCalc:
-            temp.append(dictVars[var][i])
+            if var not in dictVars:
+                equiv = var[len(var) - 1:] + var[len(var) - 2: -1] + var[:-2]
+                temp.append(dictVars[equiv][i])
+            else:
+                temp.append(dictVars[var][i])
 
         newBool = 0
         for j in range(len(temp)):
