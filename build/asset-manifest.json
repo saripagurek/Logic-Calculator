@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Logic-Calculator/static/css/main.68d0541d.css",
+    "main.js": "/Logic-Calculator/static/js/main.3df39d63.js",
+    "static/js/787.4e84918e.chunk.js": "/Logic-Calculator/static/js/787.4e84918e.chunk.js",
+    "index.html": "/Logic-Calculator/index.html",
+    "main.68d0541d.css.map": "/Logic-Calculator/static/css/main.68d0541d.css.map",
+    "main.3df39d63.js.map": "/Logic-Calculator/static/js/main.3df39d63.js.map",
+    "787.4e84918e.chunk.js.map": "/Logic-Calculator/static/js/787.4e84918e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.68d0541d.css",
+    "static/js/main.3df39d63.js"
+  ]
+}
