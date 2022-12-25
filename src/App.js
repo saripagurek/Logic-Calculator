@@ -1,12 +1,16 @@
 import './App.css';
 import React from "react";
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 
 let eq = "(A|B)";
 
 function makeData() {
-  console.log(window.truthTable(eq))
+  try {
+    console.log(window.truthTable(eq))
+  }
+  catch(err) {
+    alert("Error: Invalid Input \nCheck for correct brackets and invalid characters")
+  }
   return JSON.parse(window.truthTable(eq));
 }
 
@@ -18,8 +22,7 @@ function MyForm(props) {
 
     eq = `${str}`
     console.log(eq)
-   props.setData(makeData())
-    //alert(`The str you entered was: ${str}`)
+    props.setData(makeData())
   }
 
   return (
@@ -54,12 +57,17 @@ function App() {
     rows.push(Object.keys(data).map((key) => data[key][i]))
   }
   return (
-    
     <div className="App">
       <div className="align">
+      <div className="title">
+        <h1>Predicate Logic Calculator</h1>
+        <h2>Input a logical equation to evaluate a truth table. 
+          Ensure your equation is surrounded with brackets: "(A|B)".</h2>
+          <h2>Use the symbols: & , | , ! . </h2>
+      </div>
       <MyForm setData={setData} />
       <table>
-        <tr>
+        <tr class="header">
           {Object.keys(data).map((key) => <td>{key}</td>)}
         </tr>
         {
